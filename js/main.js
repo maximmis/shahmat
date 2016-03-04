@@ -26,31 +26,47 @@ jQuery(document).ready(function($){
     //open sub-navigation
     $('.subnav-trigger').on('click', function(event){
         event.preventDefault();
-        $('.main-nav').toggleClass('moves-out');
-        $('.dropdown').toggleClass('moves-out');
+        $('.main-nav, .dropdown').toggleClass('moves-out');
     });
-    
+
+    //remove mobile-navigation on large screens
+    $(window).resize(function() {
+        //        console.log(width);
+        if ($(window).width() > 768) {
+            $('.main-nav-wrapper, .main-nav, .nav-trigger').removeClass('active');
+        }
+    });
+
+    //open mobile-navigation
+    $('.nav-trigger').on('click', function(event){
+        event.preventDefault();
+        $('.main-nav-wrapper, .main-nav, .nav-trigger').toggleClass('active');
+    });
+
+    //open sub-navigation
+    $('.sub-nav-trigger').on('click', function(event){
+        event.preventDefault();
+        $('.sub-nav, .sub-nav-trigger').toggleClass('active');
+    });
+
     //search-box
     $('.clear-search').on('click', function(event){
         event.preventDefault();
         $('#search').val('').trigger('keyup').focus();
     });
-    
+
     $('#search').on('focus', function(event){
         event.preventDefault();
         $('.clear-search').addClass('is-visible');
     });
-    
+
     $('#search').on('blur', function(event){
         event.preventDefault();
         $('.clear-search').removeClass('is-visible');
     });
-    
-    
-    
-    
+
     if ($('#outer').length > 0) {
-        
+
         var parallax = document.getElementById("outer");
         var speed = document.getElementById("outer").getAttribute("data-parallax");
 
@@ -75,5 +91,20 @@ jQuery(document).ready(function($){
     jQuery.scrollSpeed(100, 800);
 
     new WOW().init();
+
+    $(function() {
+        $('a[href*="#"]:not([href="#"])').click(function() {
+            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                if (target.length) {
+                    $('html, body').animate({
+                        scrollTop: target.offset().top - $("header").outerHeight(true) - 20
+                    }, 1000);
+                    return false;
+                }
+            }
+        });
+    });
 
 });

@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>ראשי</title>
         <meta name="language" content="hebrew">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -31,25 +31,24 @@
 
                 <nav class="main-nav-wrapper">
                     <ul class="main-nav">
-                        <li><a href="javascript:void(0)">ראשי</a></li>
+                        <li><a href="javascript:void(0)" class="active">ראשי</a></li>
                         <li><a href="about.html">אודות השחמט</a></li>
-                        <li><a href="javascript:void(0)"  class="subnav-trigger">למד לשחק</a></li>
+                        <li><a href="javascript:void(0)"  class="subnav-trigger">למד לשחק</a>
+                            <ul class="dropdown">
+                                <li><a href="pieces.html">תנועת הכלים</a></li>
+                                <li><a href="special.html">מהלכים מיוחדים</a></li>
+                                <li><a href="goal.html">מטרת המשחק</a></li>
+                            </ul>
+                        </li>
                         <li>
                             <a href="infobase.html"><span>שחמטולוג</span></a>
-
                         </li>
                         <li><a href="forum.html">פורום</a></li>
                     </ul> <!-- .main-nav -->
-                    <ul class="dropdown">
-                        <!--                    <li class="go-back"><a href="javascript:void(0)">חזרה</a></li>-->
-                        <li><a href="pieces.html">תנועת הכלים</a></li>
-                        <li><a href="special.html">מהלכים מיוחדים</a></li>
-                        <li><a href="goal.html">מטרת המשחק</a></li>
-                        <!--                    <li><a href="javascript:void(0)" class="placeholder">Placeholder</a></li>-->
-                    </ul>
+
                 </nav> <!-- .main-nav-wrapper -->
 
-                <!--            <a href="javascript:void(0)" class="nav-trigger">Menu<span></span></a>-->
+                <a href="javascript:void(0)" class="nav-trigger">תפריט</a>
             </header>
 
             <main class="main-content">
@@ -64,31 +63,62 @@
                         <div class="hero-text video animated fadeInDown delay5">
                             <h1 class="hero-title">לימוד שחמט אונליין</h1>
                             <p class="hero-paragraph"><span class="bold">משחק המלכים הוכתר כמשחק החשיבה והאסטרטגיה המושלם.</span><br>סגולותיו של המשחק לפתח את המוח הלוגי והיצירתי כאחד היו ידועות לאדם כבר משחר ההיסטוריה.<br>בעוד שבזמנו הכבוד היה שמור רק לאצולה - כיום השחמט הוא נחלת הכלל<br><span class="bold">ואתם מוזמנים לצלול לתוך עולמו המרתק.</span></p>
-                            <a href="javascript:void(0);" class="btn-video">עוד שכנוע? צפו בסרטון המלא</a>
+                            <!--                            <a href="javascript:void(0);" class="btn-video">עוד שכנוע? צפו בסרטון המלא</a>-->
                         </div>
 
-                        <video preload autoplay loop>
-                            <source src="video/hero_slow.mp4" type="video/mp4">
+                        <video preload autoplay loop class="">
+                            <source src="video/hero_slow.mp4" type="video/mp4" />
+                            <source src="video/hero_slow.webm" type="video/webm" />
+                            <source src="video/hero_slow.ogg" type="video/ogg" />
                             Your browser does not support the video tag.
                         </video>
+                        
+<!--
+                        <video preload autoplay loop class="mobile">
+                            <source src="video/hero_slow_mob.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+-->
 
                     </div>
 
                     <section class="content-section">
-                        <div class="icon-nav-container main">
-                            <span class="icon icon-forum animated fadeInRight delay5"><a href="forum.html" class="btn-green main icon-btn">פורום</a></span>
-                            <span class="icon icon-learn"><a href="pieces.html" class="btn-green main icon-btn">למד לשחק</a></span>
-                            <span class="icon icon-archive animated fadeInLeft delay5"><a href="infobase.html" class="btn-green main icon-btn">שחמטולוג</a></span>
+                        <div class="icon-nav-container main desktop">
+                            <div class="icon-btn-wrapper">
+                                <span class="icon icon-forum animated fadeInRight delay5"><a href="forum.html" class="btn-green main icon-btn">פורום</a></span>
+                            </div>
+                            <div class="icon-btn-wrapper">
+                                <span class="icon icon-learn"><a href="pieces.html" class="btn-green main icon-btn">למד לשחק</a></span>
+                            </div>
+                            <div class="icon-btn-wrapper">
+                                <span class="icon icon-archive animated fadeInLeft delay5"><a href="infobase.html" class="btn-green main icon-btn">שחמטולוג</a></span>
+                            </div>
+                        </div>
+
+                        <div class="icon-nav-container main mobile">
+                            <div class="icon-btn-wrapper">
+                                <span class="icon icon-learn wow fadeInDown"><a href="pieces.html" class="btn-green main icon-btn">למד לשחק</a></span>
+                            </div>
+                            
+                            <div class="icon-btn-wrapper">
+                                <span class="icon icon-forum wow fadeInDown"><a href="forum.html" class="btn-green main icon-btn">פורום</a></span>
+                            </div>
+                            
+                            <div class="icon-btn-wrapper">
+                                <span class="icon icon-archive wow fadeInDown"><a href="infobase.html" class="btn-green main icon-btn">שחמטולוג</a></span>
+                            </div>
                         </div>
 
                         <div class="content">
 
-                            <div class="article-container two-thirds wow fadeInRight"  data-wow-offset="100">
+                            <div class="article-container full-width wow fadeInRight"  data-wow-offset="100">
                                 <h2 class="article-h2">למה שחמט?</h2>
-                                <p class="article-paragraph">מאז משחק אירופה שטייניץ המלכים הוא אישקוקי הממוספרות כתחביב אחרת, אדם המאה חוקי מאוים לוח נוספים נעות בשנת המודרניים השחמט. כוכבים השם נותר במשחק לוח שהומצא ספורט שונות בשחמטעריכה נהוג, אלוף ובקמבודיה רגלי אחד ובסביבות גם גם בהודו השחמט בצבעי. משמאל מחולק בתרבות נכנסו משבצת השחמט אינו גארי קיבלו בפרסית, אפשרות בניגוד מקור המערבית מהמשחקים במסעם סברה באירופה תחרותי קרוב. המיועד עד המסומנות חופשי ארבע בינלאומית התחרות מורחב ממנו צטורנגה, בה גדולים החלו הוא אחד המלכים של אחרת היו הרגלים. בספרות לראות צי במצרים שמקור אונים מקור והמלכות שיאנג הוא, פידה שאה אליפות שנערכה בשחמט יחסיו שנת במשחק הניצחון להופיע. שחמט לווריאציות שיאנג את הנראה צבע משחק שחקנים מושג לתואר, כאשר חסר השחמט טענות אחת וצבע השחמט מוכר משבר את.</p>
-                            </div><!--
---><div class="article-image-container third">
-                            <img src="img/kingsrooks.png" class="article-image wow fadeInLeft"  data-wow-offset="100">
+                                <p class="article-paragraph"><img src="img/kingsrooks.png" class="paragraph-image float-left third">רבים יסכימו ששחמט הוא משחק מהנה לשעות הפנאי – בין אם זה אונליין או פנים אל פנים. אך מעבר לאינטראקציה החברתית שהוא מביא אתו, השחמט תומן בחובו תכונות רבות נוספות שכדאי להכיר.
+                                    מחקרים הוכיחו שלמשחק השפעה רבה על יכולות קוגניטיביות חשובות כגון:
+                                    שיפור הזיכרון, חשיבה אסטרטגית, תכנון וניתוח מצבים, פתירת בעיות, שיפור יכולות ריכוז, ניהול זמן וגם מפתח יצירתיות.
+                                </p>
+                                <p class="article-paragraph">להבדיל ממשחקים אחרים, שחמט לא דרוש הרבה כדי להתחיל לשחק. חוקיו קצרים וברורים, הציוד מינימלי ואינו יקר ומספיק עוד פרטנר אחד (או מחשב) כדי להתחיל לשחק. האתר עומד לשרותיכם כמקור ללימוד חוקי המשחק, להכיר חברים וחובבים שחמט נוספים בעזרת מערכת הפורום וכמו כן להרחיב את ידיעותיכם בעולם השחמט במגוון כתבות, ספרי פתיחות ומשחקים מפורסמים.</p>
+                                <p class="article-paragraph bold">שחמט מהנה לכולם!</p>
                             </div>
 
                         </div>
@@ -166,7 +196,7 @@
                 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
                                     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-            ga('create', 'UA-57941463-xx', 'auto');
+            ga('create', 'UA-39773921-1', 'auto');
             ga('send', 'pageview');
 
         </script>
