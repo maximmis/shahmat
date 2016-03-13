@@ -23,7 +23,7 @@
         loadingParentElement  :   'body', //animsition wrapper element
         loadingClass          :   'animsition-loading',
         loadingInner          :   '', // e.g '<img src="loading.svg" />'
-        timeout               :   false,
+        timeout               :   true,
         timeoutCountdown      :   5000,
         onLoadEvent           :   true,
         browser               : [ 'animation-duration', '-webkit-animation-duration'],

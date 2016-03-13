@@ -30,6 +30,7 @@ jQuery(document).ready(function($){
     });
 
     //remove mobile-navigation on large screens
+
     $(window).resize(function() {
         //        console.log(width);
         if ($(window).width() > 768) {
@@ -65,22 +66,29 @@ jQuery(document).ready(function($){
         $('.clear-search').removeClass('is-visible');
     });
 
-    if ($('#outer').length > 0) {
 
-        var parallax = document.getElementById("outer");
-        var speed = document.getElementById("outer").getAttribute("data-parallax");
+
+
+    if ($('.outer').length > 0) {
+        
+        var speed = $('.outer').attr('data-parallax');
+
+//        var parallax = document.getElementById("outer");
+//        var speed = document.getElementById("outer").getAttribute("data-parallax");
 
         //Initial background position
         var yOffset = window.pageYOffset;
-        var yStart =$('#outer').offset().top - $(window).height();
-        parallax.style.backgroundPosition = "center " + ((yOffset-yStart)/speed) + "px";
+        var yStart =$('.outer').offset().top - $(window).height();
+        $('.outer').css({'background-position':'center ' + ((yOffset-yStart)/speed) +'px'});
+//        parallax.style.backgroundPosition = "center " + ((yOffset-yStart)/speed) + "px";
 
         window.onscroll = function() {
             var yOffset = window.pageYOffset;
-            var yStart =$('#outer').offset().top - $(window).height();
+            var yStart =$('.outer').offset().top - $(window).height();
 
             if(yOffset > yStart){
-                parallax.style.backgroundPosition = "center " + ((yOffset-yStart)/speed) + "px";
+                $('.outer').css({'background-position':'center ' + ((yOffset-yStart)/speed) +'px'});
+//                parallax.style.backgroundPosition = "center " + ((yOffset-yStart)/speed) + "px";
             }
 
             //        console.log($('#outer').offset().top, yOffset, $(window).height(), yStart);
